@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-#SBATCH --mem 24G --nodes 1 --ntasks 4 -J slice.GVCFGeno --out logs/GVCFGenoGATK4.slice_%a.%A.log  -a 1-46 
+#SBATCH --mem 24G --nodes 1 --ntasks 4 -J slice.GVCFGeno --out logs/GVCFGenoGATK4.slice_%a.%A.log  -a 1-23
 hostname
 MEM=24g
 module unload R
@@ -104,7 +104,7 @@ do
 	fi
 
 	if [[ ! -f $FILTERSNP.gz || $STEM.$TYPE.vcf.gz -nt $FILTERSNP.gz ]]; then
-	    gatk VariantFiltration --output $FILTERSNP \
+	    gatk VariantFiltration --output $FILTERSNP --tmp-dir $TEMPDIR \
 		--variant $STEM.$TYPE.vcf.gz -R $REFGENOME \
 		--cluster-window-size 10  \
 		--filter-expression "QD < 2.0" --filter-name QualByDepth \
