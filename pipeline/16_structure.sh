@@ -37,3 +37,5 @@ do
 	chooseK.py --input=$OUT/$PREFIX.$POPNAME.$TYPE
     done
 done
+
+Rscript scripts/plot_distruct.R
