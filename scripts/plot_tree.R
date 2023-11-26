@@ -37,7 +37,7 @@ p2<-p + geom_fruit(
   starstroke=0.2
 ) +   scale_fill_manual(values = getPalette(colourCount))
 
-ggsave("cladogram.pdf",p2,width=10,height=10)
+ggsave("strain_tree/cladogram.pdf",p2,width=10,height=10)
 
 
 p <- ggtree(tree, size=0.5) + geom_tiplab(hjust=-0.5,size=1.5) +
@@ -45,3 +45,4 @@ p <- ggtree(tree, size=0.5) + geom_tiplab(hjust=-0.5,size=1.5) +
   scale_fill_manual(values = getPalette(colourCount))
 p2 <- gheatmap(p,tCNV,colnames_offset_y=-0.5,font.size = 2,offset=0.5) + scale_fill_continuous(type = "viridis",name="Chrom\nCNV")
 ggsave("strain_tree/strain_tree_CNV.pdf",p2,width=10,height=20)
+
