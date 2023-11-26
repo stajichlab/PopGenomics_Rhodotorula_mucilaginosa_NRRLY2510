@@ -69,10 +69,10 @@ p1 <- plotQ(flist[8],returnplot=T,exportplot=T,basesize=10,useindlab=T,showindla
             grplab=onelabsetrep,grplabsize=3,linesize=0.8,pointsize=2,outputfilename="Rmuc.combined.groupK8", imgtype="pdf",
             height=10,width=100,exportpath="structure")
 
-p1 <- plotQ(flist[c(3:8)],imgoutput="join",returnplot=T,exportplot=T,basesize=8,ordergrp=T,useindlab=T,showindlab=T,showlegend=T,sharedindlab=T,
+p1 <- plotQ(flist[c(3:8)],imgoutput="join",returnplot=T,exportplot=T,basesize=9,ordergrp=T,useindlab=T,showindlab=T,showlegend=T,sharedindlab=T,
             clustercol=clist$shiny,
-          grplab=onelabsetrep,grplabsize=2,linesize=0.8,pointsize=2,outputfilename="Rmuc.combined.groups_3-8", imgtype="pdf",exportpath="structure",
-     width=100)
+          grplab=onelabsetrep,grplabsize=4,linesize=0.8,pointsize=2,outputfilename="Rmuc.combined.groups_3-8", imgtype="pdf",exportpath="structure",
+          height=10,width=100)
 
 p <- plotQMultiline(flist[6], returnplot=T,spl=100,useindlab=T,showlegend=T,
                     clustercol=clist$shiny,
