@@ -2,6 +2,9 @@ library(pophelper)
 library(grid)
 library(gridExtra)
 library(dplyr)
+library(readr)
+library(tidyverse)
+
 clist <- list(
 "shiny"=c("#1D72F5","#DF0101","#77CE61", "#FF9326","#A945FF","#0089B2","#FDF060","#FFA6B2","#BFF217","#60D5FD","#CC1577","#F2B950","#7FB21D","#EC496F","#326397","#B26314","#027368","#A4A4A4","#610B5E"),
 "strong"=c("#11A4C8","#63C2C5","#1D4F9F","#0C516D","#2A2771","#396D35","#80C342","#725DA8","#B62025","#ED2224","#ED1943","#ED3995","#7E277C","#F7EC16","#F8941E","#8C2A1C","#808080"),
@@ -41,7 +44,7 @@ class(flist)
 tr1 <- tabulateQ(qlist=flist)
 summariseQ(tr1, writetable=TRUE,exportpath="structure")
 
-
+pdf("structure_plots.pdf")
 p1 <- plotQ(flist,
             imgoutput="join",returnplot=T,exportplot=T,linesize=0.8,pointsize=4,
             basesize=8,
@@ -49,23 +52,37 @@ p1 <- plotQ(flist,
             outputfilename="Rmuc.joinedplot",imgtype="pdf",
             useindlab=T,showindlab=T,showlegend=T,sharedindlab=F,
             width=100, exportpath="structure")
-#grid.arrange(p1$plot[[1]])
+
 
 p1 <- plotQ(flist[6],returnplot=T,exportplot=T,basesize=10,useindlab=T,showindlab=T,showlegend=T,sharedindlab=T,ordergrp=T,indlabsize=5,
+            clustercol=clist$shiny,
             grplab=onelabsetrep,grplabsize=3,linesize=0.8,pointsize=2,outputfilename="Rmuc.combined.groupK6", imgtype="pdf",
             height=10,width=100,exportpath="structure")
 
+p1 <- plotQ(flist[7],returnplot=T,exportplot=T,basesize=10,useindlab=T,showindlab=T,showlegend=T,sharedindlab=T,ordergrp=T,indlabsize=5,
+            clustercol=clist$shiny,
+            grplab=onelabsetrep,grplabsize=3,linesize=0.8,pointsize=2,outputfilename="Rmuc.combined.groupK7", imgtype="pdf",
+            height=10,width=100,exportpath="structure")
+
+p1 <- plotQ(flist[8],returnplot=T,exportplot=T,basesize=10,useindlab=T,showindlab=T,showlegend=T,sharedindlab=T,ordergrp=T,indlabsize=5,
+            clustercol=clist$shiny,
+            grplab=onelabsetrep,grplabsize=3,linesize=0.8,pointsize=2,outputfilename="Rmuc.combined.groupK8", imgtype="pdf",
+            height=10,width=100,exportpath="structure")
+
 p1 <- plotQ(flist[c(3:8)],imgoutput="join",returnplot=T,exportplot=T,basesize=8,ordergrp=T,useindlab=T,showindlab=T,showlegend=T,sharedindlab=T,
-      grplab=onelabsetrep,grplabsize=2,linesize=0.8,pointsize=2,outputfilename="Rmuc.combined.groups", imgtype="pdf",exportpath="structure",
+            clustercol=clist$shiny,
+          grplab=onelabsetrep,grplabsize=2,linesize=0.8,pointsize=2,outputfilename="Rmuc.combined.groups_3-8", imgtype="pdf",exportpath="structure",
      width=100)
 
 p <- plotQMultiline(flist[6], returnplot=T,spl=100,useindlab=T,showlegend=T,
+                    clustercol=clist$shiny,
+                    imgtype="pdf",exportplot=T,sortind="Cluster1",grplab=onelabsetrep,grplabsize=2,ordergrp=T,
+                    outputfilename="Rmuc.joined_multiline.K_6",exportpath="structure")
+p <- plotQMultiline(flist[7], returnplot=T,spl=100,useindlab=T,showlegend=T,
+                    clustercol=clist$shiny,
                     imgtype="pdf",exportplot=T,sortind="Cluster1",grplab=onelabsetrep,grplabsize=2,ordergrp=T,
                     outputfilename="Rmuc.joined_multiline.K_7",exportpath="structure")
-p <- plotQMultiline(flist[7], returnplot=T,spl=100,useindlab=T,showlegend=T,
-                    imgtype="pdf",exportplot=T,sortind="Cluster1",grplab=onelabsetrep,grplabsize=2,ordergrp=T,
-                    outputfilename="Rmuc.joined_multiline.K_8",exportpath="structure")
 p <- plotQMultiline(flist[8], returnplot=T,spl=100,useindlab=T,showlegend=T,
+                    clustercol=clist$shiny,
                     imgtype="pdf",exportplot=T,sortind="Cluster1",grplab=onelabsetrep,grplabsize=2,ordergrp=T,
-                    outputfilename="Rmucjoined_multiline.K_9",exportpath="structure")
-
+                    outputfilename="Rmucjoined_multiline.K_8",exportpath="structure")
