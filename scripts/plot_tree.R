@@ -9,7 +9,7 @@ library(tidytree)
 library(ggtreeExtra)
 library(ggstar)
 library(RColorBrewer)
-tree<-read.tree("strain_tree/RmucY2510_v1.All.SNP.fasttree.tre")
+tree<-read.tree("strain_tree/RmucY2510_v1.All.SNP.fasttree_reroot.tre")
 #tree<-read.tree("strain_tree/Rmuc_v7.All.SNP.poppr.nj.tre")
 meta <- read_csv("strain_metdata.csv",col_names=TRUE) %>% 
   mutate(label=Strain) %>% select(label,SimpleEnv,culture_collection) %>% 

@@ -1,3 +1,9 @@
+*.dist.txt
+*.csi
+*.bed.gz
+*.meanP
+*.meanQ
+*.log
 *~
 #*
 .#*
