@@ -27,22 +27,26 @@ if [[ -z $POPYAML || ! -s $POPYAML ]]; then
 	echo "Cannot find \$POPYAML variable - set in config.txt"
 	exit
 fi
-IN=$SLICEVCF
+IN=$SLICEVCF.all_sites
+FINALVCF=$FINALVCF.all_sites
 mkdir -p $FINALVCF
 
 for POPNAME in $(yq eval '.Populations | keys' $POPYAML | perl -p -e 's/^\s*\-\s*//')
 do
-  for TYPE in SNP INDEL
-  do
-     OUT=$FINALVCF/$PREFIX.$POPNAME.$TYPE.combined_selected.vcf.gz
-     QC=$FINALVCF/$PREFIX.$POPNAME.$TYPE.combined_selected.QC.tsv
-     if [ ! -s $OUT ];  then
-     	bcftools concat -Oz -o $OUT --threads $CPU $IN/$POPNAME/${PREFIX}.*.${TYPE}.selected.vcf.gz
-     	tabix $OUT
-     fi
-     if [[ ! -s $QC || $OUT -nt $QC ]]; then
-     	./scripts/vcf_QC_report.py --vcf $OUT -o $QC
-     fi
+    # create a filtered VCF containing only invariant sites
+    for TYPE in SNP all-sites
+    do
+	echo $PREFIX
+	
+	OUT=$FINALVCF/$PREFIX.$POPNAME.$TYPE.combined_selected.vcf.gz
+	QC=$FINALVCF/$PREFIX.$POPNAME.$TYPE.combined_selected.QC.tsv
+	if [ ! -s $OUT ];  then
+     	    bcftools concat -Oz -o $OUT --threads $CPU $IN/$POPNAME/${PREFIX}.*.${TYPE}.selected.vcf.gz
+     	    tabix $OUT
+	fi
+	if [[ ! -s $QC || $OUT -nt $QC ]]; then
+     	    ./scripts/vcf_QC_report.py --vcf $OUT -o $QC
+	fi
+    done
 
-   done
  done
