@@ -1,0 +1,4 @@
++ plot strain tree + chrom anneuploidy as heatmap
++ structure plots
+- tajima D
+- investigate divergence across chroms for some pops
