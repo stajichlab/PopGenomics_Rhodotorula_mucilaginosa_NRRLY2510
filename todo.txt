@@ -2,3 +2,4 @@
 + structure plots
 - tajima D
 - investigate divergence across chroms for some pops
+- pairwise divergence based on SNPs
