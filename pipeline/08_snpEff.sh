@@ -1,10 +1,8 @@
 #!/usr/bin/bash
 #SBATCH --mem=64G -p batch --nodes 1 --ntasks 8 --out logs/snpEff.log
-module unload miniconda2
-module load miniconda3
+
 module load snpEff
-module load bcftools/1.12
-module load tabix
+module load bcftools
 module load yq
 
 CPU=$SLURM_CPUS_ON_NODE
