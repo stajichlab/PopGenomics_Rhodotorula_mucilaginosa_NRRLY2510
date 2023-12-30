@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH -p batch -N 1 -n 16 --mem 48gb --out logs/assemble_unmapped.%a.log
+#SBATCH -p hpcc_default -N 1 -n 16 --mem 48gb --out logs/assemble_unmapped.%a.log
 
 module load spades
 module load fastp
