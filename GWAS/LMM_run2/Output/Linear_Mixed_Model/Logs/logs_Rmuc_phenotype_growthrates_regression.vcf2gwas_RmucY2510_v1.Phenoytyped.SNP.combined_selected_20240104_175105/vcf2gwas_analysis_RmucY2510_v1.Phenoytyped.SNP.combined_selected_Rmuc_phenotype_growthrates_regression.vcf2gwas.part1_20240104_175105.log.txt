@@ -1,0 +1,86 @@
+
+Beginning with analysis of Rmuc_phenotype_growthrates_regression.vcf2gwas.part1.csv
+
+Preparing files
+
+Checking and adjusting files..
+Checking individuals in VCF file..
+Checking individuals in phenotype file..
+All phenotype and genotype individuals match
+Removed 0 out of 218 genotype individuals, 218 remaining 
+Removed 0 out of 218 phenotype individuals, 218 remaining
+No covariate file specified
+In total, removed 0 out of 218 genotype individuals, 218 remaining
+Files successfully adjusted
+
+Filtering and converting files
+
+Converting to PLINK BED..
+Successfully converted to PLINK BED (Duration: 3.7 seconds)
+
+Adding phenotypes/covariates to .fam file
+
+Editing .fam file..
+All phenotypes chosen
+Phenotype(s) added to .fam file
+No covariate file specified, continuing without
+Editing .fam file successful
+
+Initialising GEMMA
+
+Running GEMMA
+
+Phenotypes to analyze: Salt6
+
+Creating relatedness matrix..
+Relatedness matrix created successfully
+Starting with Salt6 analysis..
+Output will be saved in LMM_run2/Output/Linear_Mixed_Model/Salt6/Salt6_20240104_175105/
+Reading relatedness matrix..
+Calculating linear mixed model..
+Linear mixed model calculated successfully
+GEMMA executed successfully on Salt6
+
+GEMMA completed successfully (Duration: 4 minutes, 16.2 seconds)
+
+Analyzing GEMMA results
+
+Starting post-processing of Salt6..
+Summarizing p-values..
+Variants with the best p_lrt score saved in LMM_run2/Output/Linear_Mixed_Model/Salt6/Salt6_20240104_175105/best_p-values
+Creating Manhattan plot of p_lrt..
+Number of significant SNPs: 0 
+Level of significance: 9.59e-08 
+Number of total SNPs: 521470
+Manhattan plot saved as "p_lrt_manh_Salt6_mod_sub_Rmuc_phenotype_growthrates_regression.vcf2gwas.part1_RmucY2510_v1.Phenoytyped.SNP.combined_selected.png" in LMM_run2/Output/Linear_Mixed_Model/Salt6/Salt6_20240104_175105/manhattan (Duration: 31.0 seconds)
+Creating QQ-plot..
+QQ-plot saved as "p_lrt_qq_Salt6_mod_sub_Rmuc_phenotype_growthrates_regression.vcf2gwas.part1_RmucY2510_v1.Phenoytyped.SNP.combined_selected.png" in LMM_run2/Output/Linear_Mixed_Model/Salt6/Salt6_20240104_175105/QQ (Duration: 3.8 seconds)
+Variants with the best p_score score saved in LMM_run2/Output/Linear_Mixed_Model/Salt6/Salt6_20240104_175105/best_p-values
+Creating Manhattan plot of p_score..
+Number of significant SNPs: 0 
+Level of significance: 9.59e-08 
+Number of total SNPs: 521470
+Manhattan plot saved as "p_score_manh_Salt6_mod_sub_Rmuc_phenotype_growthrates_regression.vcf2gwas.part1_RmucY2510_v1.Phenoytyped.SNP.combined_selected.png" in LMM_run2/Output/Linear_Mixed_Model/Salt6/Salt6_20240104_175105/manhattan (Duration: 31.2 seconds)
+Creating QQ-plot..
+QQ-plot saved as "p_score_qq_Salt6_mod_sub_Rmuc_phenotype_growthrates_regression.vcf2gwas.part1_RmucY2510_v1.Phenoytyped.SNP.combined_selected.png" in LMM_run2/Output/Linear_Mixed_Model/Salt6/Salt6_20240104_175105/QQ (Duration: 3.6 seconds)
+Variants with the best p_wald score saved in LMM_run2/Output/Linear_Mixed_Model/Salt6/Salt6_20240104_175105/best_p-values
+Creating Manhattan plot of p_wald..
+Number of significant SNPs: 0 
+Level of significance: 9.59e-08 
+Number of total SNPs: 521470
+Manhattan plot saved as "p_wald_manh_Salt6_mod_sub_Rmuc_phenotype_growthrates_regression.vcf2gwas.part1_RmucY2510_v1.Phenoytyped.SNP.combined_selected.png" in LMM_run2/Output/Linear_Mixed_Model/Salt6/Salt6_20240104_175105/manhattan (Duration: 30.8 seconds)
+Creating QQ-plot..
+QQ-plot saved as "p_wald_qq_Salt6_mod_sub_Rmuc_phenotype_growthrates_regression.vcf2gwas.part1_RmucY2510_v1.Phenoytyped.SNP.combined_selected.png" in LMM_run2/Output/Linear_Mixed_Model/Salt6/Salt6_20240104_175105/QQ (Duration: 3.6 seconds)
+Analysis of Salt6 completed
+
+Analysis of GEMMA results completed successfully
+
+Starting clean-up
+
+Top SNPs saved
+Moving files..
+Clean up successful 
+
+Analysis of Rmuc_phenotype_growthrates_regression.vcf2gwas.part1.csv finished successfully
+Runtime: 6 minutes, 17.2 seconds
+

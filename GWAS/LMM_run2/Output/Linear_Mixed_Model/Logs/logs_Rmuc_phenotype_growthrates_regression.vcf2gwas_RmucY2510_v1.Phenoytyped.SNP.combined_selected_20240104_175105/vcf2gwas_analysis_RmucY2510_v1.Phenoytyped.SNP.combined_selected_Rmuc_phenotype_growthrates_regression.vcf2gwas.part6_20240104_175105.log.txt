@@ -1,0 +1,86 @@
+
+Beginning with analysis of Rmuc_phenotype_growthrates_regression.vcf2gwas.part6.csv
+
+Preparing files
+
+Checking and adjusting files..
+Checking individuals in VCF file..
+Checking individuals in phenotype file..
+All phenotype and genotype individuals match
+Removed 0 out of 218 genotype individuals, 218 remaining 
+Removed 0 out of 218 phenotype individuals, 218 remaining
+No covariate file specified
+In total, removed 0 out of 218 genotype individuals, 218 remaining
+Files successfully adjusted
+
+Filtering and converting files
+
+Converting to PLINK BED..
+Successfully converted to PLINK BED (Duration: 3.7 seconds)
+
+Adding phenotypes/covariates to .fam file
+
+Editing .fam file..
+All phenotypes chosen
+Phenotype(s) added to .fam file
+No covariate file specified, continuing without
+Editing .fam file successful
+
+Initialising GEMMA
+
+Running GEMMA
+
+Phenotypes to analyze: T37C
+
+Creating relatedness matrix..
+Relatedness matrix created successfully
+Starting with T37C analysis..
+Output will be saved in LMM_run2/Output/Linear_Mixed_Model/T37C/T37C_20240104_175105/
+Reading relatedness matrix..
+Calculating linear mixed model..
+Linear mixed model calculated successfully
+GEMMA executed successfully on T37C
+
+GEMMA completed successfully (Duration: 6 minutes, 31.4 seconds)
+
+Analyzing GEMMA results
+
+Starting post-processing of T37C..
+Summarizing p-values..
+Variants with the best p_lrt score saved in LMM_run2/Output/Linear_Mixed_Model/T37C/T37C_20240104_175105/best_p-values
+Creating Manhattan plot of p_lrt..
+Number of significant SNPs: 2 
+Level of significance: 9.59e-08 
+Number of total SNPs: 521470
+Manhattan plot saved as "p_lrt_manh_T37C_mod_sub_Rmuc_phenotype_growthrates_regression.vcf2gwas.part6_RmucY2510_v1.Phenoytyped.SNP.combined_selected.png" in LMM_run2/Output/Linear_Mixed_Model/T37C/T37C_20240104_175105/manhattan (Duration: 30.3 seconds)
+Creating QQ-plot..
+QQ-plot saved as "p_lrt_qq_T37C_mod_sub_Rmuc_phenotype_growthrates_regression.vcf2gwas.part6_RmucY2510_v1.Phenoytyped.SNP.combined_selected.png" in LMM_run2/Output/Linear_Mixed_Model/T37C/T37C_20240104_175105/QQ (Duration: 3.6 seconds)
+Variants with the best p_score score saved in LMM_run2/Output/Linear_Mixed_Model/T37C/T37C_20240104_175105/best_p-values
+Creating Manhattan plot of p_score..
+Number of significant SNPs: 1 
+Level of significance: 9.59e-08 
+Number of total SNPs: 521470
+Manhattan plot saved as "p_score_manh_T37C_mod_sub_Rmuc_phenotype_growthrates_regression.vcf2gwas.part6_RmucY2510_v1.Phenoytyped.SNP.combined_selected.png" in LMM_run2/Output/Linear_Mixed_Model/T37C/T37C_20240104_175105/manhattan (Duration: 29.7 seconds)
+Creating QQ-plot..
+QQ-plot saved as "p_score_qq_T37C_mod_sub_Rmuc_phenotype_growthrates_regression.vcf2gwas.part6_RmucY2510_v1.Phenoytyped.SNP.combined_selected.png" in LMM_run2/Output/Linear_Mixed_Model/T37C/T37C_20240104_175105/QQ (Duration: 3.3 seconds)
+Variants with the best p_wald score saved in LMM_run2/Output/Linear_Mixed_Model/T37C/T37C_20240104_175105/best_p-values
+Creating Manhattan plot of p_wald..
+Number of significant SNPs: 2 
+Level of significance: 9.59e-08 
+Number of total SNPs: 521470
+Manhattan plot saved as "p_wald_manh_T37C_mod_sub_Rmuc_phenotype_growthrates_regression.vcf2gwas.part6_RmucY2510_v1.Phenoytyped.SNP.combined_selected.png" in LMM_run2/Output/Linear_Mixed_Model/T37C/T37C_20240104_175105/manhattan (Duration: 29.6 seconds)
+Creating QQ-plot..
+QQ-plot saved as "p_wald_qq_T37C_mod_sub_Rmuc_phenotype_growthrates_regression.vcf2gwas.part6_RmucY2510_v1.Phenoytyped.SNP.combined_selected.png" in LMM_run2/Output/Linear_Mixed_Model/T37C/T37C_20240104_175105/QQ (Duration: 3.4 seconds)
+Analysis of T37C completed
+
+Analysis of GEMMA results completed successfully
+
+Starting clean-up
+
+Top SNPs saved
+Moving files..
+Clean up successful 
+
+Analysis of Rmuc_phenotype_growthrates_regression.vcf2gwas.part6.csv finished successfully
+Runtime: 8 minutes, 27.9 seconds
+
