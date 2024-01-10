@@ -1,0 +1,11 @@
+Individuals cleared for analyis: 218
+Individuals used for analysis by GEMMA: 218
+Total SNPs analyzed by GEMMA: 423563
+Significant SNPs: 1
+Significance level: 1.18e-07
+Total SNPs analyzed by GEMMA: 423563
+Significant SNPs: 0
+Significance level: 1.18e-07
+Total SNPs analyzed by GEMMA: 423563
+Significant SNPs: 1
+Significance level: 1.18e-07
