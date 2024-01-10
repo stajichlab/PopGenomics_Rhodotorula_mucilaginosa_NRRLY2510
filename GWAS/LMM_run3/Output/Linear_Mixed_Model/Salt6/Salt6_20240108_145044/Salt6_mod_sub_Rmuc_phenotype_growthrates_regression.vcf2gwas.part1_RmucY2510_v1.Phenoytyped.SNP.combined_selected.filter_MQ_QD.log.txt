@@ -1,0 +1,37 @@
+##
+## GEMMA Version    = 0.98.3 (2020-11-28)
+## Build profile    = 
+## GCC version      = 7.5.0
+## GSL Version      = 1.16
+## OpenBlas         = OpenBLAS 0.3.12  - OpenBLAS 0.3.25 DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=128
+##   arch           = Haswell
+##   threads        = 32
+##   parallel type  = threaded
+##
+## Command Line Input = gemma -bfile _vcf2gwas_temp_20240108_145044/mod_sub_Rmuc_phenotype_growthrates_regression.vcf2gwas.part1_RmucY2510_v1.Phenoytyped.SNP.combined_selected.filter_MQ_QD -k _vcf2gwas_temp_20240108_145044/mod_sub_Rmuc_phenotype_growthrates_regression.vcf2gwas.part1_RmucY2510_v1.Phenoytyped.SNP.combined_selected.filter_MQ_QD.cXX.txt -lmm 4 -n 1 -o Salt6_mod_sub_Rmuc_phenotype_growthrates_regression.vcf2gwas.part1_RmucY2510_v1.Phenoytyped.SNP.combined_selected.filter_MQ_QD -outdir LMM_run3/Output/Linear_Mixed_Model/Salt6/Salt6_20240108_145044 
+##
+## Date = Mon Jan  8 14:58:08 2024
+##
+## Summary Statistics:
+## number of total individuals = 218
+## number of analyzed individuals = 218
+## number of covariates = 1
+## number of phenotypes = 1
+## number of total SNPs/var = 423576
+## number of analyzed SNPs/var = 423563
+## REMLE log-likelihood in the null model = -196.715
+## MLE log-likelihood in the null model = -197.121
+## pve estimate in the null model = 3.0596e-06
+## se(pve) in the null model = 0.0199065
+## vg estimate in the null model = 3.58855e-06
+## ve estimate in the null model = 0.358855
+## beta estimate in the null model =   1.11904
+## se(beta) =   0.0405725
+##
+## Computation Time:
+## total computation time = 2.9816 min 
+## computation time break down: 
+##      time on eigen-decomposition = 0.0309659 min 
+##      time on calculating UtX = 0.386617 min 
+##      time on optimization = 2.21267 min 
+##
