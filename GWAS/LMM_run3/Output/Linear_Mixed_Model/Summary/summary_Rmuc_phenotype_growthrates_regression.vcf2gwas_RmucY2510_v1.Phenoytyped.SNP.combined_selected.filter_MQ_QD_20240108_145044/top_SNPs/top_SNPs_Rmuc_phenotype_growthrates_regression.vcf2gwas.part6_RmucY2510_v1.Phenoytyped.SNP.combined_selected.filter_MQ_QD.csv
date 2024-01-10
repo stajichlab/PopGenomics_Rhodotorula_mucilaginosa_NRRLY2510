@@ -1,0 +1,17 @@
+,T37C,T37C,T37C,T37C
+,chr,SNP_ID,SNP_pos,p_value
+0,scaffold_3,"scaffold_3:1216973\C,\T",1216973,1.714968e-08
+1,scaffold_5,"scaffold_5:244214\A,\G",244214,1.576018e-07
+2,scaffold_5,"scaffold_5:365308\T,\C",365308,1.576018e-07
+3,scaffold_9,"scaffold_9:175367\A,\C",175367,2.097692e-07
+4,scaffold_7,"scaffold_7:396165\G,\A",396165,8.033592e-07
+5,scaffold_6,"scaffold_6:858097\A,\G",858097,1.250281e-06
+6,scaffold_5,"scaffold_5:499458\G,\A",499458,1.250281e-06
+7,scaffold_2,"scaffold_2:261139\G,\A",261139,1.250281e-06
+8,scaffold_2,"scaffold_2:1143870\A,\C",1143870,1.432031e-06
+9,scaffold_2,"scaffold_2:260415\C,\T",260415,1.697767e-06
+10,scaffold_7,"scaffold_7:3142\C,\T",3142,2.203802e-06
+11,scaffold_12,"scaffold_12:818155\G,\C",818155,3.842636e-06
+12,scaffold_5,"scaffold_5:1066151\A,\C",1066151,3.842636e-06
+13,scaffold_3,"scaffold_3:634712\G,\T",634712,3.842636e-06
+14,scaffold_8,"scaffold_8:633777\A,\T",633777,3.842636e-06

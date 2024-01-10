@@ -1,0 +1,2 @@
+SNP_ID,SNP_pos,chr,p_value,count,phenotypes
+"scaffold_8:983095\A,\C",983095,scaffold_8,,3,"T15C, T22C, T30C"

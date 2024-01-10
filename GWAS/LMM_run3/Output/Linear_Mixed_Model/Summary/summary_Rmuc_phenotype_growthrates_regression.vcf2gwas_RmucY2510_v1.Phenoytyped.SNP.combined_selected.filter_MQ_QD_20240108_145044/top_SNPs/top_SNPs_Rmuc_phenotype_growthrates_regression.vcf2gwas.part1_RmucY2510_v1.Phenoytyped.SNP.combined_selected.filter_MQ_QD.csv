@@ -1,0 +1,17 @@
+,Salt6,Salt6,Salt6,Salt6
+,chr,SNP_ID,SNP_pos,p_value
+0,scaffold_12,"scaffold_12:619647\A,\G",619647,0.0002660872
+1,scaffold_12,"scaffold_12:614707\A,\G",614707,0.0002955441
+2,scaffold_12,"scaffold_12:619601\T,\G",619601,0.0003936579
+3,scaffold_3,"scaffold_3:882444\A,\C",882444,0.0005661655
+4,scaffold_1,"scaffold_1:1264109\A,\G",1264109,0.0005870034
+5,scaffold_13,"scaffold_13:69142\T,\C",69142,0.0007173386
+6,scaffold_8,"scaffold_8:619507\G,\T",619507,0.0008189253
+7,scaffold_2,"scaffold_2:72845\G,\C",72845,0.0008644439
+8,scaffold_12,"scaffold_12:619719\G,\A",619719,0.000965806
+9,scaffold_6,"scaffold_6:994917\C,\T",994917,0.00101063
+10,scaffold_19,"scaffold_19:204464\G,\A",204464,0.00101063
+11,scaffold_6,"scaffold_6:909464\C,\T",909464,0.00101063
+12,scaffold_19,"scaffold_19:252780\C,\T",252780,0.00101063
+13,scaffold_3,"scaffold_3:594124\T,\A",594124,0.001018467
+14,scaffold_12,"scaffold_12:614711\A,\G",614711,0.001090099

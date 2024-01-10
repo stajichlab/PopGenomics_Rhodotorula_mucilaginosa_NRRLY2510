@@ -1,0 +1,3 @@
+SNP_ID,SNP_pos,chr,p_value,count,phenotypes
+"scaffold_8:983095\A,\C",983095,scaffold_8,7.919374e-08,1,T22C
+"scaffold_3:1216973\C,\T",1216973,scaffold_3,1.714968e-08,1,T37C

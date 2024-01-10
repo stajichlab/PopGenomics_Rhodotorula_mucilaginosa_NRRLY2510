@@ -1,0 +1,17 @@
+,T15C,T15C,T15C,T15C
+,chr,SNP_ID,SNP_pos,p_value
+0,scaffold_8,"scaffold_8:273023\G,\A",273023,0.0005673485
+1,scaffold_2,"scaffold_2:543292\C,\A",543292,0.0005673648
+2,scaffold_2,"scaffold_2:543275\C,\T",543275,0.0005673648
+3,scaffold_15,"scaffold_15:695481\G,\A",695481,0.002585868
+4,scaffold_15,"scaffold_15:695483\T,\C",695483,0.002585868
+5,scaffold_8,"scaffold_8:983095\A,\C",983095,0.002852939
+6,scaffold_4,"scaffold_4:407743\A,\G",407743,0.003003087
+7,scaffold_16,"scaffold_16:32388\A,\G",32388,0.003149654
+8,scaffold_16,"scaffold_16:32376\T,\G",32376,0.003149654
+9,scaffold_16,"scaffold_16:32364\T,\A",32364,0.003149654
+10,scaffold_16,"scaffold_16:32365\C,\T",32365,0.003149654
+11,scaffold_16,"scaffold_16:32381\G,\A",32381,0.003149654
+12,scaffold_16,"scaffold_16:32400\T,\C",32400,0.003149654
+13,scaffold_12,"scaffold_12:759570\A,\C",759570,0.00341731
+14,scaffold_12,"scaffold_12:803752\G,\C",803752,0.003788093
