@@ -1,0 +1,25 @@
+
+Formula: y ~ (((2 * (1 - d) * (1 - (1 - r)^k)) + (2 * d * (1 - (1 - r)^k)^2) + 
+    (2 * d * ((1 - r)^k) * (1 - (1 - r)^k))) * dnbinom(x, size = kmercov/bias, 
+    mu = kmercov) * length + (((1 - d) * ((1 - r)^k)) + (d * 
+    (1 - (1 - r)^k)^2)) * dnbinom(x, size = kmercov * 2/bias, 
+    mu = kmercov * 2) * length + (2 * d * ((1 - r)^k) * (1 - 
+    (1 - r)^k)) * dnbinom(x, size = kmercov * 3/bias, mu = kmercov * 
+    3) * length + (d * (1 - r)^(2 * k)) * dnbinom(x, size = kmercov * 
+    4/bias, mu = kmercov * 4) * length)
+
+Parameters:
+         Estimate Std. Error   t value Pr(>|t|)    
+d       4.042e-02  5.978e-03     6.761  1.5e-11 ***
+r       1.069e-01  1.989e-03    53.742  < 2e-16 ***
+kmercov 1.191e+02  7.177e-03 16601.661  < 2e-16 ***
+bias    1.496e+00  2.053e-03   729.028  < 2e-16 ***
+length  9.889e+06  4.761e+04   207.707  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 669.5 on 5775 degrees of freedom
+
+Number of iterations to convergence: 8 
+Achieved convergence tolerance: 7.554e-07
+
