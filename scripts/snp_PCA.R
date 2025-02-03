@@ -1,9 +1,9 @@
 #!/usr/bin/env Rscript
 library(gdsfmt)
 library(SNPRelate)
-gdsfile = "plots/snps_selected.gds"
-vcf.fn <- "vcf/Rmuc_v7.All.SNP.combined_selected.vcf.gz"
-title="Rhodotorula mucilaginosa strains"
+gdsfile = "plots/snps_selected-All.gds"
+vcf.fn <- "vcf/RmucY2510_v1.All.SNP.combined_selected.vcf.gz"
+title="Rhodotorula mucilaginosa strains - All"
 if(!file.exists(gdsfile)){
 	snpgdsVCF2GDS_R(vcf.fn, gdsfile,method="biallelic.only")
 	                #option=snpgdsOption(CM002236=1,CM002237=2,CM002238=3,CM002239=4,CM002240=5,CM002241=6,CM002242=7))
@@ -11,8 +11,8 @@ if(!file.exists(gdsfile)){
 snpgdsSummary(gdsfile)
 genofile <- snpgdsOpen(gdsfile)
 
-#chroms <- read.gdsn(index.gdsn(genofile,"snp.chromosome"))
-#chr <- strtoi(sub("SCAF_([0-9]+)","\\1",chroms,perl=TRUE))
+chroms <- read.gdsn(index.gdsn(genofile,"snp.chromosome"))
+chr <- strtoi(sub("scaffold_([0-9]+)","\\1",chroms,perl=TRUE))
 
 pca <- snpgdsPCA(genofile,num.thread=2,autosome.only=FALSE)
 
@@ -21,7 +21,7 @@ pc.percent <- pca$varprop*100
 #pca$sample.id
 
 head(round(pc.percent, 2))
-pdf("plots/PCA_snp_plots.pdf")
+pdf("plots/PCA_snp_plots-All.pdf")
 tab <- data.frame(sample.id = pca$sample.id,
                  # pop = pheno$MinimalMediaGrowth,
                   EV1=pca$eigenvect[,1], # PCA vector 1
@@ -46,7 +46,7 @@ snpgdsDrawTree(rv, main=title,
 table(rv$samp.group)
 df = data.frame(group = rv$samp.group)
 rownames(df) = pca$sample.id
-write.csv(df,"plots/popset_inferred.csv")
+write.csv(df,"plots/popset_inferred-All.csv")
 tab <- data.frame(sample.id = pca$sample.id,
                   pop = rv$samp.group,
                   EV1=pca$eigenvect[,1], # PCA vector 1
@@ -58,10 +58,10 @@ plot(tab$EV2, tab$EV1,
 
 CORRSNP <- snpgdsPCACorr(pca, genofile, eig.which=1:4,num.thread=2)
 
-#savepar <- par(mfrow=c(3,1), mai=c(0.3, 0.55, 0.1, 0.25))
-#for (i in 1:3)
-#{
-#  plot(abs(CORRSNP$snpcorr[i,]), ylim=c(0,1), xlab="", ylab=paste("PC", i),
-#       col=factor(chr), pch="+")
-#}
+savepar <- par(mfrow=c(3,1), mai=c(0.3, 0.55, 0.1, 0.25))
+for (i in 1:3)
+{
+ plot(abs(CORRSNP$snpcorr[i,]), ylim=c(0,1), xlab="", ylab=paste("PC", i),
+       col=factor(chr), pch="+")
+}
 
